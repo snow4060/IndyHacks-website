@@ -188,8 +188,8 @@ html, body{
   }
 
 .page2{
-    height: 500vh;
-    background-image: linear-gradient(#5144bb, #a14c84, #a14c84, #37306b);
+    /* height: 150vh; */
+    background-image: linear-gradient(#5144bb, #a14c84, #37306b, rgb(0, 0, 0));
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
@@ -198,9 +198,12 @@ html, body{
 
 #about{
     display: flex;
-    padding-top: 10%;
+    margin-top: 10%;
     width: 70%;
     align-items: center;
+    /* border-radius: 24px;
+    background-image: linear-gradient(to right, #273463, #8B4256);
+    padding: 20px; */
 }
 
 p{
@@ -210,7 +213,7 @@ p{
 .title{
     font-family: assistant-extrabold;
     color:#d4d2de;
-    font-size: 36px;
+    font-size: 42px;
 }
 .content{
     font-family: assistant;
@@ -222,7 +225,8 @@ p{
     /* background: linear-gradient(to right, );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; */
-    color: #ebb762
+    color: #ebb762;
+    font-size: 48px;
 }
 #about .content{
     margin-left: 5%;
@@ -234,6 +238,8 @@ p{
     width: 70%;
         /* align-items: center; */
     justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 10%;
 }
 .info-column{
     display: flex;
@@ -241,20 +247,110 @@ p{
     margin-left: 2%;
     margin-right: 2%;
     width: 46%;
-    margin-top: 4%;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 .info-box, .info-box-wide{
     background-color: transparent;
-    margin-top: 2%;
-    margin-bottom: 2%;
+    margin-top: 10px;
+    margin-bottom: 10px;
     text-align: center;
     padding: 15px;
     border-radius: 24px;
-    background-color: red
 }
 .info-box-wide{
-    margin-left: 27%;
-    margin-right: 27%;
-    width: 46%;
+    margin-left: 2%;
+    margin-right: 2%;
+    width:calc(29% - 30px);
+    background-color: #273463;
+    /* background-color: #482763; */
 }
 
+.info-box .title, .info-box-wide .title{
+    font-size: 32px;
+} 
+
+.footnote{
+    color: #d4d2de;
+    font-size: 18px;
+}
+
+#schedule{
+    align-self: flex-start;
+    margin-left: 15%;
+    margin-bottom: 45px;
+}
+
+.schedule{
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
+.day{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 75px;
+    /* flex: 28.3%; */
+    width: 28.3vw;
+
+    /* width: 25%;
+    margin-left: 1.65%;
+    margin-right: 1.65%; */
+}
+.day .title{
+    font-size: 32px;
+    margin-bottom: 45px;
+}
+table{
+    border-spacing: 0 0;
+    border-collapse: separate;
+    border: none;
+}
+.day table{
+    color: #d4d2de;
+    width: 100%;
+    height: 100%;
+}
+
+#day1{
+    border-left: 4px solid #d4d2de;
+    border-right: 2px solid #d4d2de;
+}
+#day2{
+    border-left: 2px solid #d4d2de;
+    border-right: 2px solid #d4d2de;
+}
+#day3{
+    border-left: 2px solid #d4d2de;
+    border-right: 4px solid #d4d2de;
+}
+/* table{
+    border-left: 4px solid #d4d2de;
+    border-right: 4px solid #d4d2de;
+} */
+
+td{
+    border: none;
+    text-align: left;
+    vertical-align: baseline;
+    height: 100px;
+    box-sizing: border-box;
+    font-size: 22px;
+    vertical-align: top;
+    padding: 0;
+    margin: 0;
+    word-wrap: break-word;
+    width: 65%;
+    padding-left: 20px;
+    padding-right: 40px;
+}
+.time{
+    width: 35%;
+    /* width: 50%; */
+    text-align: right;
+    vertical-align: top;
+    word-wrap: break-word;
+    padding-left: 40px;
+    padding-right: 20px;
+}
