@@ -56,6 +56,8 @@ html, body{
     padding-right: 10%;
     color: #d4d2de;
     display: flex;
+    backdrop-filter: brightness(0.9);
+    position: static;
 }
 .logo, .navigation{
     flex-basis: 50%;
@@ -213,12 +215,12 @@ p{
 .title{
     font-family: assistant-extrabold;
     color:#d4d2de;
-    font-size: 42px;
+    font-size: 36px;
 }
 .content{
     font-family: assistant;
     color: #d4d2de;
-    font-size: 24px;
+    font-size: 20px;
 }
 #about .title{
     margin-right: 5%;
@@ -239,7 +241,7 @@ p{
         /* align-items: center; */
     justify-content: center;
     margin-top: 5%;
-    margin-bottom: 10%;
+    margin-bottom: 100px;
 }
 .info-column{
     display: flex;
@@ -257,6 +259,7 @@ p{
     text-align: center;
     padding: 15px;
     border-radius: 24px;
+    /* position: relative; */
 }
 .info-box-wide{
     margin-left: 2%;
@@ -285,22 +288,22 @@ p{
     display: flex;
     justify-content: center;
     background-color: black;
+    flex-wrap: wrap;
+    padding-bottom: 80px;
 }
 .day{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 75px;
+    margin-bottom: 45px;
     /* flex: 28.3%; */
-    width: 28.3vw;
-
     /* width: 25%;
     margin-left: 1.65%;
     margin-right: 1.65%; */
 }
 .day .title{
     font-size: 32px;
-    margin-bottom: 45px;
+    margin-bottom: 15px;
 }
 table{
     border-spacing: 0 0;
@@ -310,47 +313,143 @@ table{
 .day table{
     color: #d4d2de;
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
 }
 
-#day1{
-    border-left: 4px solid #d4d2de;
-    border-right: 2px solid #d4d2de;
+@media screen and (min-width: 1000px){
+    .day{
+        width: 28.3vw;
+    }
+    #day1{
+        border-left: 4px solid #d4d2de;
+        border-right: 2px solid #d4d2de;
+    }
+    #day2{
+        border-left: 2px solid #d4d2de;
+        border-right: 2px solid #d4d2de;
+    }
+    #day3{
+        border-left: 2px solid #d4d2de;
+        border-right: 4px solid #d4d2de;
+    }
 }
-#day2{
-    border-left: 2px solid #d4d2de;
-    border-right: 2px solid #d4d2de;
+@media screen and (min-width: 768px) and (max-width: 1000px){
+    .day{
+        width: 42.5%;
+    }
+    .row1{
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+    #day1{
+        border-left: 4px solid #d4d2de;
+        border-right: 4px solid #d4d2de;
+    }
+    #day2{
+        border-left: 4px solid #d4d2de;
+        border-right: 2px solid #d4d2de;
+    }
+    #day3{
+        border-left: 2px solid #d4d2de;
+        border-right: 4px solid #d4d2de;
+    }
 }
-#day3{
-    border-left: 2px solid #d4d2de;
-    border-right: 4px solid #d4d2de;
+@media screen and (max-width: 768px){
+    .day{
+        width: 70%;
+    }
+    #day1{
+        border-left: 4px solid #d4d2de;
+        border-right: 4px solid #d4d2de;
+    }
+    #day2{
+        border-left: 4px solid #d4d2de;
+        border-right: 4px solid #d4d2de;
+    }
+    #day3{
+        border-left: 4px solid #d4d2de;
+        border-right: 4px solid #d4d2de;
+    }
 }
-/* table{
-    border-left: 4px solid #d4d2de;
-    border-right: 4px solid #d4d2de;
-} */
+
 
 td{
+    padding: 0;
+}
+
+.time, .event{
     border: none;
-    text-align: left;
-    vertical-align: baseline;
-    height: 100px;
-    box-sizing: border-box;
-    font-size: 22px;
     vertical-align: top;
+    box-sizing: border-box;
+    font-size: 20px;
     padding: 0;
     margin: 0;
     word-wrap: break-word;
-    width: 65%;
-    padding-left: 20px;
-    padding-right: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
+
 .time{
-    width: 35%;
+    width: 40%;
     /* width: 50%; */
     text-align: right;
     vertical-align: top;
     word-wrap: break-word;
     padding-left: 40px;
     padding-right: 20px;
+}
+.event{
+    width: 60%;
+    padding-left: 20px;
+    padding-right: 40px;
+}
+
+.page4{
+    height: 100vh;
+    background: linear-gradient(black, #37306b, #a14c84);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+#sponsors{
+    color: #ebb762
+}
+.coming-soon{
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: white; */
+   filter: brightness(0.5);
+    width: 100%;
+}
+.page4 .content{
+    margin-top: 50px;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 125px;
+}
+.page4 a{
+    color: #d4d2de;
+    text-decoration: underline;
+    text-decoration-color: #ebb762;
+}
+
+#judges{
+    color: #ebb762;
+}
+
+#faq{
+    align-self: flex-start;
+    margin-left: 15%;
+    margin-bottom: 25px;
+    width: 70%;
+    margin-right: 15%;
+    border-bottom: 4px solid #ebb762;
+}
+
+.faq{
+    height: 100vh;
+    background-color: #a14c84;
 }
