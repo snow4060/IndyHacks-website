@@ -11,7 +11,7 @@ var multiple2 = new Multiple({
 
 var scheduleData;
 
-var scheduleRows = document.querySelector('table').rows.length;
+var scheduleRows;
 var maxHeight = 0;
 function setScheduleHeight(scheduleWrap=1){
     for(let i = 0; i < scheduleRows; i++){
@@ -37,12 +37,12 @@ function setScheduleHeight(scheduleWrap=1){
 }
 document.addEventListener('DOMContentLoaded', () => {
     var table1 = document.getElementById('day1');
-    let table1Rows = table1.rows.length;
+    const table1Rows = table1.rows.length;
     var table2 = document.getElementById('day2');
-    let table2Rows = table2.rows.length;
+    const table2Rows = table2.rows.length;
     var table3 = document.getElementById('day3');
-    let table3Rows = table3.rows.length;
-    var mostRows = Math.max(table1Rows, table2Rows, table3Rows);
+    const table3Rows = table3.rows.length;
+    const mostRows = Math.max(table1Rows, table2Rows, table3Rows);
     console.log(mostRows)
 
     for(let i = 0; i < mostRows-table1Rows; i++){
@@ -64,6 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     scheduleData = document.querySelectorAll('td');
+    scheduleRows = document.querySelector('table').rows.length
 
     for(let i = 0; i < scheduleData.length; i++){
         scheduleData[i].style.height = 'min-content';
@@ -75,6 +76,11 @@ document.addEventListener('DOMContentLoaded', () => {
         setScheduleHeight(2);
     }
 });
+
+var answers = document.querySelectorAll('.answer');
+for(let i = 0; i < answers.length; i++){
+    answers[i].style.height = '0px';
+}
 
 window.addEventListener('resize', () => {
     for(let i = 0; i < scheduleData.length; i++){
@@ -88,5 +94,31 @@ window.addEventListener('resize', () => {
         setScheduleHeight(2);
         console.log('case 2');
     }
-})
+});
+
+function showFaq(question, answer){
+    answer.style.setProperty('--target-height', answer.scrollHeight + 'px');
+    //currently hidden
+    if(!answer.classList.contains('show')){
+        answer.classList.remove('hide');
+        question.classList.remove('turn-plus-animation');
+        answer.classList.add('show');
+        question.classList.add('turn-x-animation');
+    }
+    //currently shown
+    else{
+        answer.classList.remove('show');
+        question.classList.remove('turn-x-animation');
+        answer.classList.add('hide');
+        question.classList.add('turn-plus-animation');
+    }
+}
+
+document.body.addEventListener('click', (event) => {
+    if(event.target.matches('.question') || event.target.matches('span')){
+        console.log('question clicked');
+        console.log(event.target.nextElementSibling);
+        showFaq(event.target, event.target.nextElementSibling);
+    }
+});
 
