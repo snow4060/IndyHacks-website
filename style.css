@@ -30,6 +30,7 @@ html, body{
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    background-color: #a14c84;
 }
 
 .landing-page{
@@ -454,7 +455,10 @@ a{
     background-color: #a14c84;
     padding-left: 15%;
     padding-right: 15%;
+
     padding-bottom: 125px;
+
+    /* padding-bottom: 100px; */
     
     display: flex;
     flex-wrap: wrap;
@@ -543,6 +547,8 @@ a{
 
     margin-top: 20px;
     margin-bottom: 5px;
+
+    cursor: pointer;
 }
 
 .question::after{
@@ -572,4 +578,60 @@ a{
     width: 100%;
     height: auto;
     object-fit: contain;
+}
+
+.divider{
+    width: 80%;
+    height: 100px;
+    border-top: 8px solid #ebb762;
+    background: #a14c84;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.team{
+    background: linear-gradient(#a14c84, #35289b);
+    /* background: #a14c84; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 125px;
+}
+
+.team-row{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+}
+.team-member{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.team-member img{
+    width: 175px;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    border-radius: 100%;
+    border: 4px solid #d4d2de;
+    outline: 4px solid #ebb762;
+    /* outline-offset: 4px; */
+}
+.name, .role{
+    font-size: 20px;
+    text-align: center;
+}
+.name{
+    margin-top: 10px;
+    color:#d4d2de
+
+}
+.role{
+    margin-top: 5px;
+    color:#ebb762
 }
