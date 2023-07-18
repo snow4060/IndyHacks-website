@@ -31,11 +31,13 @@ html, body{
     padding: 0;
     scroll-behavior: smooth;
     background-color: #a14c84;
+    width: 100%;
 }
 
 .landing-page{
     height: 100vh;
     width: 100%;
+    /* width: 100vw; */
     background-color: #852c6a;
     /* background-color: #35289b; */
     background-image: url("assets/background_wide.png");
@@ -61,7 +63,8 @@ html, body{
     position: static;
 }
 .logo, .navigation{
-    flex-basis: 50%;
+    flex: 50%;
+    width: 50%;
 }
 
 .top-bar .logo{
@@ -70,6 +73,7 @@ html, body{
 }
 .top-bar .logo a{
     height: 80%;
+    max-width: 100%;
 }
 .top-bar .logo a img{
     height: 100%;
@@ -197,6 +201,7 @@ html, body{
     justify-content: flex-start;
     flex-direction: column;
     align-items:center;
+    width: 100%;
 }
 
 #about{
@@ -408,6 +413,7 @@ td{
 
 .page4{
     height: 100vh;
+    width: 100%;
     background: linear-gradient(black, #37306b, #a14c84);
     display: flex;
     flex-direction: column;
@@ -588,16 +594,17 @@ a{
     object-fit: contain;
 }
 
-.divider{
+/* .divider{
     width: 80%;
     height: 100px;
     border-top: 8px solid #ebb762;
     background: #a14c84;
     margin-left: 10%;
     margin-right: 10%;
-}
+} */
 
 .team{
+    width: 100%;
     background: linear-gradient(#a14c84, #35289b);
     /* background: #a14c84; */
     display: flex;
