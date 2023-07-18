@@ -60,7 +60,6 @@ html, body{
     color: #d4d2de;
     display: flex;
     backdrop-filter: brightness(0.9);
-    position: static;
 }
 .logo, .navigation{
     flex: 50%;
@@ -412,12 +411,10 @@ td{
 }
 
 .page4{
-    height: 100vh;
     width: 100%;
     background: linear-gradient(black, #37306b, #a14c84);
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
 }
 #sponsors{
