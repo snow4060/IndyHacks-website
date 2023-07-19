@@ -871,11 +871,10 @@ a{
 }
 
 #back-to-top{
-    /* display: none; */
+    display: none;
     position: fixed;
     left: calc(95% - 73.36px);
     top: calc(95% - 56px);
-    font-size: 16px;
     padding: 10px;
     border: none;
     border-radius: 8px;
@@ -893,8 +892,17 @@ a{
     pointer-events: none;
     z-index: 1;
 } */
-#back-to-top p{
-    color: #35289b;
-
-    z-index: 2;
+@media screen and (min-width: 768px){
+    #back-to-top p{
+        color: #35289b;
+        font-size: 16px;
+        z-index: 2;
+    }
+}
+@media screen and (max-width: 768px){
+    #back-to-top p{
+        color: #35289b;
+        font-size: 12px;
+        z-index: 2;
+    }
 }
