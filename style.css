@@ -40,7 +40,6 @@ html, body{
     /* width: 100vw; */
     background-color: #852c6a;
     /* background-color: #35289b; */
-    background-image: url("assets/background_wide.png");
     /* background-size: cover; */
     background-size: auto 100%;
     background-position:center;
@@ -50,6 +49,17 @@ html, body{
     flex-direction: column;
     align-items: center;
 
+}
+@media screen and (min-width: 768px){
+    .landing-page{
+        background-image: url("assets/background_wide.png");
+    }
+}
+
+@media screen and (max-width: 768px){
+    .landing-page{
+        background-image: url("assets/background_mobile.png");
+    }
 }
 
 .top-bar{
@@ -126,15 +136,29 @@ html, body{
     align-items: center;
 }
 .title-block .title{
-    font-size: 120px;
     margin-bottom: 2vh;
     text-shadow: 0 0 0px #d4d2de, 0 0 30px #9e4784, 0 0 40px #9e4784, 0 0 50px #9e4784, 0 0 60px #9e4784, 0 0 70px #9e4784, 0 0 80px #9e4784;
     text-shadow: 0 0 0px #d4d2de, 0 0 50px #34336b, 0 0 60px #34336b, 0 0 70px #34336b;
 }
-.title-block .details{
-    font-size: 30px;
-    /* padding-left: 5vw; */
+
+@media screen and (min-width: 768px){
+    .title-block .title{
+        font-size: 120px;
+    }
+    .title-block .details{
+        font-size: 30px;
+    }
 }
+
+@media screen and (max-width: 768px){
+    .title-block .title{
+        font-size: 16vw;
+    }
+    .title-block .details{
+        font-size: 6vw;
+    }
+}
+
 .title-block .registration{
     margin-top: 5vh;
     /* padding-left: 5vw; */
@@ -220,20 +244,87 @@ p{
 .title{
     font-family: assistant-extrabold;
     color:#d4d2de;
-    font-size: 36px;
 }
 .content{
     font-family: assistant;
     color: #d4d2de;
-    font-size: 20px;
 }
+
+@media screen and (min-width: 768px){
+    .title{
+        font-size: 36px;
+    }
+    .content{
+        font-size: 20px;
+    }
+    #about .title{
+        font-size: 48px;
+    }
+    .info-box .title, .info-box-wide .title{
+        font-size: 32px;
+    } 
+    .footnote{
+        color: #d4d2de;
+        font-size: 18px;
+    }
+    .info-column{
+        display: flex;
+        flex-direction: column;
+        margin-left: 2%;
+        margin-right: 2%;
+        width: 46%;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        align-items: center;
+    }
+    .info-box-wide{
+        margin-left: 2%;
+        margin-right: 2%;
+        width:calc(29% - 30px);
+        /* background-color: #482763; */
+    }
+}
+@media screen and (max-width: 768px){
+    .title{
+        font-size: 24px;
+    }
+    .content{
+        font-size: 16px;
+    }
+    .info-box .title, .info-box-wide .title{
+        font-size: 24px;
+    } 
+    .footnote{
+        color: #d4d2de;
+        font-size: 14px;
+    }
+    .info-column{
+        display: flex;
+        flex-direction: column;
+        margin-left: 2%;
+        margin-right: 2%;
+        width: 96%;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        align-items: center;
+    }
+    .info-box-wide{
+        margin-left: 2%;
+        margin-right: 2%;
+        width:calc(96% - 30px);
+        /* background-color: #482763; */
+    }
+    .info-box-slim{
+        width: 60%;
+    }
+}
+
 #about .title{
     margin-right: 5%;
     /* background: linear-gradient(to right, );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; */
     color: #ebb762;
-    font-size: 48px;
 }
 #about .content{
     margin-left: 5%;
@@ -248,15 +339,6 @@ p{
     margin-top: 5%;
     margin-bottom: 100px;
 }
-.info-column{
-    display: flex;
-    flex-direction: column;
-    margin-left: 2%;
-    margin-right: 2%;
-    width: 46%;
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
 .info-box, .info-box-wide{
     background-color: transparent;
     margin-top: 10px;
@@ -264,30 +346,31 @@ p{
     text-align: center;
     padding: 15px;
     border-radius: 24px;
+    background-color: #273463;
     /* position: relative; */
 }
-.info-box-wide{
-    margin-left: 2%;
-    margin-right: 2%;
-    width:calc(29% - 30px);
-    background-color: #273463;
-    /* background-color: #482763; */
+
+@media screen and (min-width: 768px){
+    #schedule{
+        font-size: 48px;
+    }
+    .day .title{
+        font-size: 32px;
+    }
 }
-
-.info-box .title, .info-box-wide .title{
-    font-size: 32px;
-} 
-
-.footnote{
-    color: #d4d2de;
-    font-size: 18px;
+@media screen and (max-width: 768px){
+    #schedule{
+        font-size: 28px;
+    }
+    .day .title{
+        font-size: 24px;
+    }
 }
 
 #schedule{
     align-self: flex-start;
     margin-left: 15%;
     margin-bottom: 45px;
-    font-size: 48px;
 }
 
 .schedule{
@@ -308,7 +391,6 @@ p{
     margin-right: 1.65%; */
 }
 .day .title{
-    font-size: 32px;
     margin-bottom: 15px;
 }
 table{
@@ -383,11 +465,21 @@ td{
     padding: 0;
 }
 
+@media screen and (min-width: 768px){
+    .time, .event{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 768px){
+    .time, .event{
+        font-size: 16px;
+    }
+}
+
 .time, .event{
     border: none;
     vertical-align: top;
     box-sizing: border-box;
-    font-size: 20px;
     padding: 0;
     margin: 0;
     word-wrap: break-word;
@@ -429,12 +521,26 @@ td{
    filter: brightness(0.5);
     width: 100%;
 }
+
+@media screen and (min-width: 768px){
+    .page4 .content{
+        font-size: 24px;
+    }
+}
+@media screen and (max-width: 768px){
+    .page4 .content{
+        font-size: 16px;
+    }
+}
+
+
 .page4 .content{
     margin-top: 50px;
-    font-size: 24px;
     text-align: center;
     margin-bottom: 125px;
+    width: 80%
 }
+
 a{
     color: #d4d2de;
     text-decoration: underline;
@@ -461,11 +567,21 @@ a{
 
     padding-bottom: 125px;
 
-    padding-bottom: 200px;
     
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+
+@media screen and (min-width: 768px){
+    .faq{
+        padding-bottom: 200px;
+    }
+}
+@media screen and (max-width: 768px){
+    .faq{
+        padding-bottom: 125px;
+    }
 }
 
 @keyframes turn-x{
@@ -527,10 +643,32 @@ a{
     .faq-column{
         width: 45%;
     }
+    .question{
+        font-size: 24px;
+        padding-right: calc(5% + 20.92px);
+    }
+    .question::after{
+        font-size: 40px;
+        left: calc(100% - 29.92px);
+    }
+    .answer{
+        font-size: 20px;
+    }
 }
 @media screen and (max-width: 768px){
     .faq-column{
         width: 100%;
+    }
+    .question{
+        font-size: 18px;
+        padding-right: calc(5% + 18.31px);
+    }
+    .answer{
+        font-size: 16px;
+    }
+    .question::after{
+        font-size: 35px;
+        left: calc(100% - 18.31px);
     }
 }
 
@@ -545,8 +683,10 @@ a{
     background: none;
     font-family: assistant-bold;
     color:#d4d2de;
-    font-size: 24px;
-    padding: 0;
+    /* padding: 0; */
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -554,7 +694,6 @@ a{
     text-align: left;
     width: 100%;
 
-    padding-right: 20.92px;
 
     margin-top: 20px;
     margin-bottom: 5px;
@@ -565,7 +704,6 @@ a{
 .question::after{
     content: "+";
     position: absolute;
-    font-size: 40px;
     font-family: assistant-bold;
     text-align: center;
     
@@ -573,8 +711,6 @@ a{
     /* align-self: center;
     top: 50%;
     left: 50%; */
-    left: 100%;
-    left: calc(100% - 20.92px);
 }
 
 
@@ -582,7 +718,6 @@ a{
     overflow: hidden;
     color: #d4d2de;
     font-family: assistant;
-    font-size: 20px;
 }
 
 .answer img{
@@ -593,11 +728,20 @@ a{
 
 .divider{
     width: 80%;
-    height: 100px;
     border-top: 8px solid #ebb762;
     background: #a14c84;
     margin-left: 10%;
     margin-right: 10%;
+}
+@media screen and (min-width: 768px){
+    .divider{
+        height: 100px;
+    }
+}
+@media screen and (max-width: 768px){
+    .divider{
+        height: 75px;
+    }
 }
 
 .team{
@@ -635,10 +779,20 @@ a{
     outline: 4px solid #ebb762;
     /* outline-offset: 4px; */
 }
-.name, .role{
-    font-size: 20px;
-    text-align: center;
+
+@media screen and (min-width: 768px){
+    .name, .role{
+        font-size: 20px;
+        text-align: center;
+    }
 }
+@media screen and (max-width: 768px){
+    .name, .role{
+        font-size: 16px;
+        text-align: center;
+    }
+}
+
 .name{
     margin-top: 10px;
     color:#d4d2de
