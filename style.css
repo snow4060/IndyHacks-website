@@ -151,7 +151,7 @@ html, body{
     /* background-color: #2a214d; */
     /* background: rgba(39, 52, 99, 0.2); */
 
-
+    height: 0;
     top: 10vh;
     /* padding: 5px; */
     box-sizing:border-box;
@@ -868,4 +868,33 @@ a{
 .role{
     margin-top: 5px;
     color:#ebb762
+}
+
+#back-to-top{
+    /* display: none; */
+    position: fixed;
+    left: calc(95% - 73.36px);
+    top: calc(95% - 56px);
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    filter:opacity(0.5);
+    z-index: 1;
+}
+/* #back-to-top::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.062);
+    pointer-events: none;
+    z-index: 1;
+} */
+#back-to-top p{
+    color: #35289b;
+
+    z-index: 2;
 }

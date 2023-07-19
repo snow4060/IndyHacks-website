@@ -134,3 +134,19 @@ function operateDropdown(){
     }
 }
 
+function scrollToTop(){
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+const backToTopButton = document.getElementById('back-to-top');
+window.addEventListener('scroll', () => {
+    if((window.pageYOffset/(document.body.scrollHeight - window.innerHeight)) > 0.25){
+        backToTopButton.style.display = 'block';
+    }
+    else{
+        backToTopButton.style.display = 'none';
+    }
+});
