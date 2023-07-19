@@ -461,7 +461,7 @@ a{
 
     padding-bottom: 125px;
 
-    /* padding-bottom: 100px; */
+    padding-bottom: 200px;
     
     display: flex;
     flex-wrap: wrap;
@@ -591,14 +591,14 @@ a{
     object-fit: contain;
 }
 
-/* .divider{
+.divider{
     width: 80%;
     height: 100px;
     border-top: 8px solid #ebb762;
     background: #a14c84;
     margin-left: 10%;
     margin-right: 10%;
-} */
+}
 
 .team{
     width: 100%;
