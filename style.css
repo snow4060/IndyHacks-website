@@ -283,6 +283,9 @@ p{
         width:calc(29% - 30px);
         /* background-color: #482763; */
     }
+    .info-box{
+        width: 90%;
+    }
 }
 @media screen and (max-width: 768px){
     .title{
@@ -313,6 +316,9 @@ p{
         margin-right: 2%;
         width:calc(96% - 30px);
         /* background-color: #482763; */
+    }
+    .info-box{
+        width: 75%
     }
     .info-box-slim{
         width: 60%;
