@@ -122,3 +122,15 @@ document.body.addEventListener('click', (event) => {
     }
 });
 
+var dropdown = document.querySelector('.dropdown');
+dropdown.style.height = '0px';
+
+function operateDropdown(){
+    if(dropdown.style.height === '0px'){
+        dropdown.style.height = dropdown.scrollHeight + 'px';
+    }
+    else{
+        dropdown.style.height = "0px";
+    }
+}
+
