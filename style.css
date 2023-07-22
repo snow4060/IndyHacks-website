@@ -255,6 +255,7 @@ html, body{
     display: inline-block;
     position: relative;
     font-family: assistant-extrabold;
+    text-decoration: none;
     /* text-shadow: 0 0 30px #66347f, 0 0 50px #66347f */
 }
 .registration-button::after {
