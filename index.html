@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <script>
+            if (!/^www\./.test(window.location.hostname)) {
+                // Redirect to www version of the URL
+                window.location.href = window.location.href.replace(
+                  /^([^:]+:)?(\/\/)?/,
+                  '$1$2www.'
+                );
+            }
+        </script>
+
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-13Y2EH2R5T"></script>
         <script>
