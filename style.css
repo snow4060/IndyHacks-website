@@ -794,12 +794,16 @@ a{
 }
 
 .divider{
-    width: 80%;
-    border-top: 8px solid #ebb762;
+    width: 100%;
     background: #a14c84;
+}
+.line{
+    width: 80%;
     margin-left: 10%;
     margin-right: 10%;
+    border-top: 8px solid #ebb762;
 }
+
 @media screen and (min-width: 768px){
     .divider{
         height: 100px;
